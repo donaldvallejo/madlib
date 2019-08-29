@@ -31,27 +31,25 @@ def emptyMadLib():
 
 def wordAdjective():
     adjective = ""
-    print(len(adjective))
-    while len(adjective) == 0 or isinstance(adjective, str) == False:
+    while len(adjective) == 0:
         adjective = input("there was once a _______(adjective): ")
-        if len(adjective) == 0 or isinstance(adjective, str) == False:
-            print("must input a string with length greater than 0!")
-            
+        if len(adjective) == 0:
+            print("must input a string with length greater than 0!")       
     return adjective
 
 def wordNoun():
     noun = ""
-    while len(noun) == 0 or isinstance(noun, str) == False:
+    while len(noun) == 0:
         noun = input("who wanted to be a _____(noun): ")
-        if len(noun) == 0 or isinstance(noun, str) == False:
+        if len(noun) == 0:
             print("must input a string with length greater than 0!")
     return noun
 
 def wordVerb():
     verb = ""
-    while len(verb) == 0 or isinstance(verb, str) == False:
+    while len(verb) == 0:
         verb = input("So one day he/she finally got to ______(verb): " )
-        if len(verb) == 0 or isinstance(verb, str) == False:
+        if len(verb) == 0:
             print("must input a string with length greater than 0!")
     return verb
 
