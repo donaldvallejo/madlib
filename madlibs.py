@@ -14,17 +14,16 @@
 
 
 def main():
-    print('test')
-    madlib()
+
+    emptyMadLib()
     adjective = wordAdjective()
     noun = wordNoun()
     verb = wordVerb()
-    print("test")
+    
+    filledmadLib(adjective, noun, verb)
     return True
-    # printEmpty()
 
-
-def madlib():
+def emptyMadLib():
     story = "there was once a _____(adjective) person. who wanted to be a _____(noun). So one day he/she finally got to ______(verb)"
     print(story)
     return True
@@ -55,5 +54,10 @@ def wordVerb():
         if len(verb) == 0 or isinstance(verb, str) == False:
             print("must input a string with length greater than 0!")
     return verb
+
+def filledmadLib(adjective, noun, verb):
+    #print("there was once a {} person. who wanted to be a {}. So one day he/she finally got to {}").format(adjective, noun, verb)
+    print(f"there was once a {adjective} person. who wanted to be a {noun}. So one day he/she finally got to {verb}")
+    return
 
 main()
